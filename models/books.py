@@ -4,13 +4,20 @@ class Book():
         self.author = author
         self.id = id
 
+    def __repr__(self):
+        return "{}:{}".format(self.title, self.author)
+
     def set_id(self, id):
         self.id = id
 
+    def get_id(self):
+        return self.id
+
     def get_dict_without_id(self):
         return {"title": self.title, "author" : self.author}
+
     def get_dict_with_id(self):
-        return {"id" : self.id, "title": self.title, "author": self.author}
+        return {"id": self.id, "title": self.title, "author": self.author}
 
 if __name__ == '__main__':
     b = Book()

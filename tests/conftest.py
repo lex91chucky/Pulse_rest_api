@@ -3,6 +3,7 @@ import pytest
 from fixtures.Pulse_api_client import PulseTestApi
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def book_app():
-    return PulseTestApi("books")
+    return PulseTestApi(resourse="books")
+
