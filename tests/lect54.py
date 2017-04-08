@@ -1,6 +1,8 @@
 import unittest
-from Pulse_api_client import PulseTestApi
+
+from fixtures.Pulse_api_client import PulseTestApi
 from models import Book
+
 
 class BookRestAPITests(unittest.TestCase):
     def setUp(self):
